@@ -21,4 +21,9 @@ public class OrderServiceImpl implements OrderService {
 
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
+
+    // test 용도 (@Configuration 은 싱글톤을 잘 지키는가?)
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 }

@@ -17,4 +17,9 @@ public class MemberServiceImpl implements MemberService {
     public Member findMember(Long memberId) {
         return memberRepository.findById(memberId);
     }
+
+    // test 용도 (@Configuration 은 싱글톤을 잘 지키는가?)
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 }
