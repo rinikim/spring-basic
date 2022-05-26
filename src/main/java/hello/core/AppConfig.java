@@ -18,6 +18,7 @@ public class AppConfig {
     // @Bean orderService -> new MemoryMemberRepository()
 
     // 예상 : 순서는 다를 수 있음 (출력 순서) memberRepository 이 3번 출력해야된다.
+    // @Configuration 을 주석을 하게 되면 memberRepository 가 3번 호출된다.
     // call AppConfig.memberService
     // call AppConfig.memberRepository
     // call AppConfig.memberRepository
