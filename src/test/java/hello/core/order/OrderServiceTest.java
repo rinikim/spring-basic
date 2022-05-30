@@ -1,9 +1,11 @@
 package hello.core.order;
 
 import hello.core.AppConfig;
+import hello.core.discount.FixDiscountPolicy;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import hello.core.member.MemberService;
+import hello.core.member.MemoryMemberRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,5 +29,17 @@ public class OrderServiceTest {
 
         Order order = orderService.createOrder(memberId, "itemA", 1000);
         Assertions.assertEquals(order.getDiscountPrice(), 100);
+    }
+
+    @Test
+    void fieldInjectionTest() {
+        // @Autowired 필드 주입을 하게 되면 외부에서 변경이 불가능
+//        OrderServiceImpl orderService = new OrderServiceImpl();
+
+        // setter를 생성해야 된다.
+//        orderService.setMemberRepository(new MemoryMemberRepository());
+//        orderService.setDiscountPolicy(new FixDiscountPolicy());
+
+//        orderService.createOrder(1L, "itemA", 10000);
     }
 }
