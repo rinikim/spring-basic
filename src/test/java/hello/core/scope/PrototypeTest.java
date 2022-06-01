@@ -9,7 +9,7 @@ import javax.annotation.PreDestroy;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class prototypeTest {
+public class PrototypeTest {
 
     @Test
     void prototypeBeanFind() {
